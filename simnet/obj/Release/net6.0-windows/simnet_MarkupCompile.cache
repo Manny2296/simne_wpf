@@ -1,0 +1,20 @@
+﻿simnet
+
+
+winexe
+C#
+.cs
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Release\net6.0-windows\
+simnet
+none
+false
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\App.xaml
+8184922513
+
+17-974890210
+200-326573382
+com.data.simnet.views\Historial.xaml;com.data.simnet.views\Teclado.xaml;com.data.simnet.views\teclado_letras.xaml;com.data.simnet.views\Teclado_numero.xaml;com.data.simnet.views\UserDiagnosticView.xaml;com.data.simnet.views\UserView.xaml;com.data.simnet.views\win_toma.xaml;MainWindow.xaml;
+
+True
+

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>simnet</id>
+    <version>1.0.0</version>
+    <authors>simnet</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="SQLite" version="3.13.0" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SQLite" version="1.0.118" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.runtimeconfig.json" target="lib\netcoreapp3.1\simnet.runtimeconfig.json" />
+    <file src="C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.dll" target="lib\netcoreapp3.1\simnet.dll" />
+  </files>
+</package>

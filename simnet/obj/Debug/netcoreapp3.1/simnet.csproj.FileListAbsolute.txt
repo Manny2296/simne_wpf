@@ -1,0 +1,80 @@
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.exe
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.dll.config
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.deps.json
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.runtimeconfig.json
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.runtimeconfig.dev.json
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.pdb
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\System.Data.SQLite.EF6.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libsqlite3.so
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libsqlite3.dylib
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\sqlite3.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sqlite3.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\T0245657\source\repos\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.csproj.AssemblyReference.cache
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet_MarkupCompile.cache
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet_MarkupCompile.lref
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.g.resources
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.AssemblyInfoInputs.cache
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.AssemblyInfo.cs
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.csproj.CoreCompileInputs.cache
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.csproj.CopyComplete
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.dll
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.pdb
+C:\Users\T0245657\source\repos\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.genruntimeconfig.cache
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.exe
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.dll.config
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.deps.json
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.runtimeconfig.json
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.runtimeconfig.dev.json
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\simnet.pdb
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\System.Data.SQLite.EF6.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libsqlite3.so
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libsqlite3.dylib
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\sqlite3.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sqlite3.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.csproj.AssemblyReference.cache
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet_MarkupCompile.cache
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet_MarkupCompile.lref
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.g.resources
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.AssemblyInfoInputs.cache
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.AssemblyInfo.cs
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.csproj.CoreCompileInputs.cache
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.csproj.CopyComplete
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.dll
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.pdb
+C:\Users\Signos Vitales\Documents\simnet\simnet\simnet\obj\Debug\netcoreapp3.1\simnet.genruntimeconfig.cache
