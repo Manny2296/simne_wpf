@@ -21,6 +21,7 @@ namespace simnet.com.data.simnet.views
     /// </summary>
     public partial class UserDiagnosticView : Window
     {
+        //
         //  private PatientService pastientService;
         private Patient patiente;
 
