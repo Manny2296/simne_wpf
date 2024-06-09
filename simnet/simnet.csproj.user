@@ -7,7 +7,48 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="com.data.simnet.views\Historial.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="com.data.simnet.views\Teclado.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="com.data.simnet.views\teclado_letras.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="com.data.simnet.views\Teclado_numero.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="com.data.simnet.views\UserDiagnosticView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="com.data.simnet.views\win_toma.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="com.data.simnet.views\Historial.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="com.data.simnet.views\Teclado.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="com.data.simnet.views\teclado_letras.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="com.data.simnet.views\Teclado_numero.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="com.data.simnet.views\UserDiagnosticView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="com.data.simnet.views\win_toma.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="com.data.simnet.views\UserView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

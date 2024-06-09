@@ -1,0 +1,175 @@
+﻿<Window x:Class="simnet.com.data.simnet.views.win_toma"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:simnet.com.data.simnet.views"
+        mc:Ignorable="d"
+        Title="win_toma" Height="1024" Width="768" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+
+        <Grid x:Name="grid_toma_signos" Height="NaN" Margin="44,124,44,10" Width="NaN" Visibility="Hidden">
+            <TextBlock x:Name="txt_Signos_toma" HorizontalAlignment="Left" Margin="47,0,0,0" TextWrapping="Wrap" Text="Toma de Signos " VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="#FF656565"/>
+            <Button x:Name="boton_Temperatita" Content="Toma de Temperatura" HorizontalAlignment="Left" Margin="183,212,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_Temperatita_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="boton_presion" Content="Toma de Presion" HorizontalAlignment="Left" Margin="183,430,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_presion_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="boton_oximetria" Content="Toma de Oximetria" HorizontalAlignment="Left" Margin="183,652,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_oximetria_Click" >
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="150" Margin="28,171,0,0" VerticalAlignment="Top" Width="150" Source="/com.data.simnet.views/Temperatura.png"/>
+            <Image HorizontalAlignment="Left" Height="150" Margin="28,389,0,0" VerticalAlignment="Top" Width="150" Source="/com.data.simnet.views/presiontoma-removebg-preview.png"/>
+            <Image HorizontalAlignment="Left" Height="150" Margin="28,611,0,0" VerticalAlignment="Top" Width="150" Source="/com.data.simnet.views/pulse-oximeter_6726512-removebg-preview.png"/>
+            <TextBlock x:Name="txt_resultado_temperatura" HorizontalAlignment="Left" Margin="28,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="150" FontSize="18" Text="TEM" FontWeight="Bold"/>
+            <Button x:Name="boton_salir_toma" Content="" HorizontalAlignment="Left" Margin="415,770,0,0" VerticalAlignment="Top" Height="100" Width="100" BorderBrush="White" Click="Button_Click_Salir_toma" RenderTransformOrigin="0.57,0.2">
+                <Button.Background>
+                    <ImageBrush ImageSource="/com.data.simnet.views/exit2.png"/>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="txt_resultado_presion_toma" HorizontalAlignment="Left" Margin="23,515,0,0" TextWrapping="Wrap" Text="NIBP" VerticalAlignment="Top" FontSize="18" Width="155" Height="24" FontWeight="Bold"/>
+            <TextBlock x:Name="txt_resultado_sop_toma" HorizontalAlignment="Left" Margin="23,766,0,0" TextWrapping="Wrap" Text="SPO2" VerticalAlignment="Top" Width="155" FontSize="18" FontWeight="Bold"/>
+            <Button x:Name="boton_imprimir" Content="" HorizontalAlignment="Left" Margin="284,770,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="boton_imprimir_Click" BorderBrush="White">
+                <Button.Background>
+                    <ImageBrush ImageSource="/com.data.simnet.views/printer.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid x:Name="grid_toma_tempe" Height="NaN" Margin="10,124,10,0" Width="NaN" Visibility="Hidden">
+            <TextBlock x:Name="txt_Signos_temperatura" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="70" FontWeight="Bold" Foreground="#FF656565" Width="728" Height="96"><Run Text="Temperatura"/><Run Text=" C"/><Run Language="es-co" Text="orporal"/><Run Text=" "/></TextBlock>
+            <Label Content="A continuación, encontrarás instrucciones.&#xA;Este termómetro es confiable y fácil de usar.&#xA;" VerticalAlignment="Top" RenderTransformOrigin="-8.199,-2.136" Height="64" FontSize="20" FontWeight="Bold" Foreground="#FF1F679F" Margin="170,126,153,0"/>
+            <Button x:Name="bot_siguiente_tem1" Content="Continuemos" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="448,332,0,0" Height="61" Width="166" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_siguiente_tem1_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Label x:Name="tex_temp2" Content="3. Mantén el termómetro en su lugar sin moverlo, durante 2 minutos &#xA;    y espera a que la temperatura se estabilice, valida en el monitor." HorizontalAlignment="Center" Margin="0,420,0,0" VerticalAlignment="Top" Width="538" Height="62" FontWeight="Bold" Foreground="#FF1F679F" FontSize="16"/>
+            <Button x:Name="bot_siguiente_tem2" Content="Toma Temperatura" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="464,501,0,0" Height="61" Width="215" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_siguiente_tem2_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Label Content="1. Asegúrese de que el termómetro esté limpio y en buen estado.&#xD;&#xA;2. Coloque la punta del termómetro en la axila." HorizontalAlignment="Left" VerticalAlignment="Top" Width="498" Height="62" FontWeight="Bold" Foreground="#FF1F679F" FontSize="16" Margin="181,235,0,0" IsEnabled="False"/>
+            <TextBlock x:Name="txt_Signos_tem_resu3" HorizontalAlignment="Left" Margin="146,512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Foreground="#FF656565" Width="254" Height="76" Text="Resultado " RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-15.068"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-10.231"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Button x:Name="bot_siguiente_tem3" Content="Continuar y Regresar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="508,796,0,0" Height="61" Width="212" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_siguiente_tem3_Click_1">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <TextBox x:Name="txt_resultado_temfin3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Foreground="#FFE06E0D" Height="146" Width="164" Margin="171,592,0,0" Background="Black" />
+            <Image HorizontalAlignment="Left" Height="100" Margin="274,299,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/axila-removebg-preview.png"/>
+            <Image HorizontalAlignment="Left" Height="100" Margin="69,215,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/sentempera.png"/>
+            <TextBox x:Name="txt_resultado_hora" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Foreground="#FF656565" Height="39" Width="318" Margin="94,743,0,0" Opacity="0.8" />
+            <ProgressBar  HorizontalAlignment="Left" Height="20" Margin="464,567,0,0" VerticalAlignment="Top" Width="215"  Minimum="0" Maximum="100" Value="75" Name="pbStatus" Background="#FFEDEDED" Foreground="#FFE06E0D"/>
+            <TextBlock x:Name="tx_procentaje" Text="{Binding ElementName=pbStatus, Path=Value, StringFormat={}{0:0}%}"  HorizontalAlignment="Left" Height="33" Margin="552,566,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" RenderTransformOrigin="-0.008,0.592"/>
+            <Button x:Name="boton_toma" Content="Button" HorizontalAlignment="Left" Margin="374,770,0,0" VerticalAlignment="Top" Width="100" Height="100" BorderBrush="White" Click="boton_toma_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/com.data.simnet.views/left-arrow_892645.png"/>
+                </Button.Background>
+            </Button>
+
+
+        </Grid>
+        <Grid x:Name="grid_toma_presion" HorizontalAlignment="Center" Height="899" Margin="0,105,0,0" VerticalAlignment="Top" Width="748" Visibility="Hidden">
+            <Label x:Name="txt_arterial_descrip" Content="Este dispositivo es fácil de usar y brinda resultados confiables&#xD;&#xA;para controlar tu salud cardiovascular. Sigue estos pasos:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="600" Height="78" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" Margin="72,106,0,0"/>
+            <Label x:Name="txt_arterial_paso1" Content="1. Relájate antes de iniciar. Estabiliza tu ritmo cardíaco." VerticalAlignment="Top" Width="532" Height="45" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" Margin="186,215,0,0" HorizontalAlignment="Left"/>
+            <Label x:Name="txt_arterial_paso2" Content="2. Ajusta el brazalete en tu brazo, 2 cm arriba del codo." VerticalAlignment="Top" Width="530" Height="37" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" Margin="185,265,0,0" HorizontalAlignment="Left"/>
+            <Label x:Name="txt_arterial_paso3" Content="3. Presiona el botón gris para comenzar. &#xD;&#xA;    El brazalete se inflará automáticamente." VerticalAlignment="Top" Width="422" Height="78" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" HorizontalAlignment="Left" Margin="126,338,0,0"/>
+            <Label x:Name="txt_arterial_paso42" Content="4. Mantente quieto mientras se infla y desinfla. &#xD;&#xA;    El monitor mostrará tu presión arterial." VerticalAlignment="Top" Width="454" Height="78" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" Margin="126,416,0,0" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="txt_Signos_presion" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="#FF656565" Width="528" Height="96" Text="Presion Arterial " HorizontalAlignment="Left" Margin="100,-5,0,0"/>
+            <TextBlock x:Name="txt_Signos_presion_resl" HorizontalAlignment="Left" Margin="158,496,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Foreground="#FF656565" Width="230" Height="76" Text="Resultado "/>
+            <Button x:Name="bot_guardar_presion" Content="Gurdar y Regresar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="540,798,0,0" Height="61" Width="175" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_guardar_presion_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <TextBox x:Name="txt_resultado_presion" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Foreground="#FFFDFF00" Height="144" Width="268" Margin="138,570,0,0" BorderBrush="#FF0966A1" SelectionOpacity="80" Background="Black"/>
+            <TextBox x:Name="txt_resultado_presion_pre" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Foreground="#FFFDFF00" Height="144" Width="268" Margin="138,713,0,0" RenderTransformOrigin="0.309,1.057" BorderBrush="#FF0966A1" SelectionOpacity="80" Background="Black"/>
+            <TextBox x:Name="txt_resultado_presion_hora" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FF656565" Height="38" Width="273" Margin="416,676,0,0" BorderBrush="#FF03A1A3"/>
+            <Button x:Name="bot_siguiente_presion1" Content="Siguiente" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="330,308,0,0" Height="61" Width="166" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_siguiente_presion1_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="150" Margin="22,199,0,0" VerticalAlignment="Top" Width="150" Source="/com.data.simnet.views/presiontoma-removebg-preview.png"/>
+            <Image x:Name="boton_gris" HorizontalAlignment="Left" Height="100" Margin="584,322,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/boton presion.png"/>
+            <Button x:Name="bot_siguiente_presion2" Content="Siguiente" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="517,502,0,0" Height="60" Width="166" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_siguiente_presion2_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="boton_salir_pre" Content="" HorizontalAlignment="Left" Margin="428,789,0,0" VerticalAlignment="Top" Width="100" Height="100" BorderBrush="White" Click="boton_toma_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/com.data.simnet.views/left-arrow_892645.png"/>
+                </Button.Background>
+            </Button>
+
+
+
+        </Grid>
+        <Grid x:Name="grid_oximetria_resultado" Margin="0,14,0,-14" Visibility="Hidden">
+            <Label x:Name="txt_oximetria_descrip_" Content="Estamos aquí para proporcionarte instrucciones simples y claras sobre &#xD;&#xA;cómo medir tu saturación de oxígeno y frecuencia cardíaca. Nuestro&#xD;&#xA; dispositivo es fácil de usar y te brindará lecturas confiables para&#xD;&#xA; monitorear tu salud respiratoria." HorizontalAlignment="Center" VerticalAlignment="Top" Width="700" Height="118" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" Margin="0,169,0,0"/>
+            <TextBlock x:Name="txt_Signos_oximetria_titulo" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="69" FontWeight="Bold" Foreground="#FF656565" Width="574" Height="96" Margin="0,73,0,0" HorizontalAlignment="Center" Text="Oximetria y Pulso"/>
+            <TextBlock x:Name="txt_Signos_oximetria_resul" HorizontalAlignment="Left" Margin="170,674,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Foreground="#FF656565" Width="254" Height="76" Text="Resultado "/>
+            <Button x:Name="bot_Toma_oximetria" Content="Guardar y Regresar" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="535,896,0,0" Height="61" Width="203" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_Toma_oximetria_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <TextBox x:Name="txt_resultado_oximetria" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Foreground="#FF4DDA0F" Height="70" Width="240" Margin="48,762,0,0" Background="#FF080000" />
+            <TextBox x:Name="txt_resultado_oximetria_pre" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Foreground="#FF4DE4F7" Height="70" Width="240" Margin="301,762,0,0" Background="#FF060000" />
+            <TextBox x:Name="txt_resultado_oximetria_hora" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Foreground="#FF961E1E" Height="31" Width="240" Margin="46,846,0,0" Opacity="0.8" />
+            <Label x:Name="txt_oximetria_paso1" Content="1. Desliza tu dedo índice, medio o anular (el que prefieras) en el oxímetro. &#xD;&#xA;No apliques demasiada presión." HorizontalAlignment="Left" VerticalAlignment="Top" Width="530" Height="68" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" Margin="178,305,0,0"/>
+            <Button x:Name="bot_siguiente_oximetria1" Content="Siguiente" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="267,384,0,0" Height="61" Width="166" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_siguiente_oximetria1_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Label x:Name="txt_oximetria_paso2" Content="2. Permite que el oxímetro se ajuste y detecte tu pulso.&#xD;&#xA; Espera unos segundos hasta que las lecturas sean estables." HorizontalAlignment="Left" Width="508" Height="68" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" VerticalAlignment="Top" Margin="70,408,0,0"/>
+            <Label x:Name="txt_oximetria_paso3" Content="3. Verás dos valores principales:&#xD;&#xA; la saturación de oxígeno y la frecuencia cardíaca." HorizontalAlignment="Left" VerticalAlignment="Top" Width="504" Height="68" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" Margin="68,481,0,0"/>
+            <Label x:Name="txt_oximetria_paso4" Content="4. Espere a que las lecturas sean estables y se muestren en la pantalla.  " HorizontalAlignment="Left" VerticalAlignment="Top" Width="700" Height="68" FontWeight="Bold" Foreground="#FF1F679F" FontSize="20" Margin="68,550,0,0"/>
+            <Button x:Name="bot_siguiente_oximetria2" Content="Tomar  Oximetria" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="458,605,0,0" Height="61" Width="206" BorderBrush="#FF1F679F" Foreground="#FF1F679F" FontSize="20" FontWeight="Bold" Click="bot_siguiente_oximetria2_Click_1">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="100" Margin="50,287,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/pulse-oximeter_6726512-removebg-preview.png"/>
+            <Image HorizontalAlignment="Left" Height="206" Margin="607,343,0,0" VerticalAlignment="Top" Width="139" Source="/com.data.simnet.views/oxi123.png"/>
+            <TextBox x:Name="txt_resultado_oximetria_hora_pre" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Foreground="#FF961E1E" Height="32" Width="240" Margin="301,845,0,0" Opacity="0.8" />
+            <Button x:Name="boton_salir_oxi" Content="" HorizontalAlignment="Left" Margin="422,880,0,0" VerticalAlignment="Top" BorderBrush="White" Width="100" Height="100" Click="boton_toma_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/com.data.simnet.views/left-arrow_892645.png"/>
+                </Button.Background>
+            </Button>
+
+        </Grid>
+        <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="768" Source="/com.data.simnet.views/image.png"/>
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="500" Source="/com.data.simnet.views/Logoblanco.png"/>
+        <Button x:Name="bot_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="450,894,0,0" VerticalAlignment="Top" Height="100" Width="100" BorderBrush="White" Click="Button_Click" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/com.data.simnet.views/left-arrow_892645.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="boton_salir" Content="" HorizontalAlignment="Left" Margin="591,894,0,0" VerticalAlignment="Top" Height="100" Width="100" BorderBrush="White" Click="Button_Click_Salir" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="/com.data.simnet.views/exit2.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
