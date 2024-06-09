@@ -1,0 +1,39 @@
+﻿<Window x:Class="simnet.com.data.simnet.views.UserDiagnosticView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:simnet.com.data.simnet.views"
+        mc:Ignorable="d"
+        Title="UserDiagnosticView" Height="1024" Width="768" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid Width="768" Margin="0,0,0,-6" Height="1024">
+        <Label x:Name="Usuario" Content="Usuario:" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="168,266,0,0" Width="150"/>
+        <TextBlock x:Name="titel_toma_signos" HorizontalAlignment="Left" Margin="155,142,0,0" TextWrapping="Wrap" Text="Signos Vitales " VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Width="482" Foreground="#FF656565"/>
+        <Button x:Name="boton_actualizacion" Content="Actualización Datos" HorizontalAlignment="Left" Margin="240,402,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_actualizacion_Click">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="boton_toma_nuestra" Content="Toma de Muestras" HorizontalAlignment="Left" Margin="240,564,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_toma_nuestra_Click" Width="449">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="boton_historial" Content="Historial" HorizontalAlignment="Left" Margin="240,720,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_historial_Click" Width="224">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lbl_name" Content="xxx xxxx xx" HorizontalAlignment="Left" Height="55" Margin="318,266,0,0" VerticalAlignment="Top" Width="348" FontSize="36" Opacity="0.6"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="80,401,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/diagnostico-2-removebg-preview.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="80,548,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/paciente-removebg-preview.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="88,704,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/historia_s-removebg-preview.png"/>
+        <Image HorizontalAlignment="Center" Height="97" VerticalAlignment="Top" Width="768" Source="/com.data.simnet.views/image.png"/>
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="400" Source="/com.data.simnet.views/Logoblanco.png"/>
+        <Button x:Name="boton_salir" Content="" HorizontalAlignment="Left" Margin="591,894,0,0" VerticalAlignment="Top" Height="100" Width="100" BorderBrush="White" Click="Button_Click_Salir">
+            <Button.Background>
+                <ImageBrush ImageSource="/com.data.simnet.views/exit2.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

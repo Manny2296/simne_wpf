@@ -56,6 +56,10 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            <Button x:Name="btn_is_open"  Content="Prendido" Click="btn_is_open_Click"/>
+            <Button x:Name="boton_temperatura" Content="Send temperatura" Click="Button_Click_temperature"/>
+            <Button x:Name="boton_oximetria" Content="Send oximetria" Click="Button_Click_SPO"/>
+            <Button x:Name="boton_arterial" Content="Send Arterial" Click="Button_Click_NIBP"/>
 
         </StackPanel>
     </Grid>
