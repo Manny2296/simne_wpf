@@ -1,5 +1,6 @@
 ﻿using simnet.com.data.simnet.models;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace simnet.com.data.simnet.services
 {
@@ -8,7 +9,8 @@ namespace simnet.com.data.simnet.services
         private DBConnection conn;
         public PatientService()
         {
-            conn = new DBConnection(new System.Data.SQLite.SQLiteConnection("Data Source=database.db;Version=3;New=True;Compress=True;"));
+            string connectionString = ConfigurationManager.ConnectionStrings["SQLiteConnectionString"].ConnectionString;
+            conn = new DBConnection(new System.Data.SQLite.SQLiteConnection(connectionString));
 
         }
 
