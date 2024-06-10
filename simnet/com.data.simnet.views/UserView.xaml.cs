@@ -64,6 +64,7 @@ namespace simnet
                         Grid_user_data.Visibility = Visibility.Visible;
                         btn_update.Visibility = Visibility.Visible;
                         txt_datos_actua.Visibility = Visibility.Visible;
+
                         break;
                     }
                 default:
@@ -126,6 +127,8 @@ namespace simnet
                         PopulateFormwithPatient(patient);
                         patient.ReadFlag = "99";
                         flag_insert = 0;
+                       
+
                     }
                     else
                     {
@@ -135,7 +138,7 @@ namespace simnet
                         MessageBox.Show("Usuario No Registrado por favor Registrarse.");
                         patient = new Patient();
                         flag_insert = 1;
-
+                      
 
 
 
@@ -148,6 +151,9 @@ namespace simnet
 
 
                     }
+                    keyboard_numero.Close();
+
+
                 }
                 catch (System.Exception ex)
                 {
@@ -159,6 +165,8 @@ namespace simnet
             else
             {
                 MessageBox.Show("Documento es NULL o Esta Vacío");
+                keyboard_numero.Close();
+
             }
 
 
@@ -195,10 +203,6 @@ namespace simnet
             }
         }
 
-        private void txt_documento_TextChanged(object sender, TextChangedEventArgs e)
-        {
-             
-        }
 
         private void btn_update_Click(object sender, RoutedEventArgs e)
         {
@@ -396,7 +400,7 @@ namespace simnet
         {
             if (keyboard_numero != null)
             {
-                if (keyboard_numero.IsActive)
+                if (keyboard_numero.IsActive || keyboard_numero.IsInitialized)
                 {
                     keyboard_numero.Close();
 
@@ -488,7 +492,7 @@ namespace simnet
 
             if (keyboard_numero != null)
             {
-                if (keyboard_numero.IsActive)
+                if (keyboard_numero.IsActive || keyboard_numero.IsInitialized)
                 {
                     keyboard_numero.Close();
 
@@ -503,6 +507,8 @@ namespace simnet
 
                 keyboard_numero.Show();
             }
+         
+            
 
         }
 

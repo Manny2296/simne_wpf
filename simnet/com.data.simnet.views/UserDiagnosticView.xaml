@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:simnet.com.data.simnet.views"
         mc:Ignorable="d"
-        Title="UserDiagnosticView" Height="1024" Width="768" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+        Title="UserDiagnosticView" Height="1024" Width="768" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Icon="/com.data.simnet.views/simnet.ico">
     <Grid Width="768" Margin="0,0,0,-6" Height="1024">
         <Label x:Name="Usuario" Content="Usuario:" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="168,266,0,0" Width="150"/>
         <TextBlock x:Name="titel_toma_signos" HorizontalAlignment="Left" Margin="155,142,0,0" TextWrapping="Wrap" Text="Signos Vitales " VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Width="482" Foreground="#FF656565"/>

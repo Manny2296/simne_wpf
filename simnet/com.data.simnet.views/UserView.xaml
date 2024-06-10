@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:simnet"
 
         mc:Ignorable="d"
-        Title="UserView" Height="1024" Width="768" WindowStartupLocation= "CenterScreen" Left="500" Top="90" ResizeMode="NoResize" WindowStyle="None" >
+        Title="UserView" Height="1024" Width="768" WindowStartupLocation= "CenterScreen" Left="500" Top="90" ResizeMode="NoResize" WindowStyle="None" Icon="/com.data.simnet.views/simnet.ico" >
     <Grid Cursor="AppStarting" Margin="0,-4,0,4">
 
         <TextBlock x:Name="txt_Documento" HorizontalAlignment="Center" Margin="0,128,0,0" TextWrapping="Wrap" Text="Documento" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="#FF656565"/>
@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="15*"/>
             </Grid.ColumnDefinitions>
             <Label x:Name="documento" Content="Documento:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F"/>
-            <TextBox x:Name="txt_documento" HorizontalAlignment="Left" Margin="198,0,0,1" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="298" Grid.ColumnSpan="2" TextChanged="txt_documento_TextChanged" BorderBrush="#FF0F43DE" PreviewMouseDown="txt_documento_PreviewMouseDown" />
+            <TextBox x:Name="txt_documento" HorizontalAlignment="Left" Margin="198,0,0,1" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="298" Grid.ColumnSpan="2"  BorderBrush="#FF0F43DE" PreviewMouseDown="txt_documento_PreviewMouseDown" />
         </Grid>
         <Grid x:Name="Grid_user_data" HorizontalAlignment="Left" Height="326" VerticalAlignment="Center" Width="496" Margin="86,0,0,0">
             <Label x:Name="nombre" Content="Nombre:" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top"/>

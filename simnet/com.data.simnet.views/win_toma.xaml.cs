@@ -12,12 +12,16 @@ using System.Windows.Media;
 using System.Windows.Threading;
 using System.Drawing;
 using System.Windows.Documents;
+using log4net.Repository.Hierarchy;
+using log4net;
 
 namespace simnet.com.data.simnet.views
 {
 
     public class RawPrinterHelper
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(RawPrinterHelper));
+
         // Structure and API declarions:
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public class DOCINFOA
@@ -133,6 +137,8 @@ namespace simnet.com.data.simnet.views
     /// </summary>
     public partial class win_toma : Window
     {
+        private static readonly ILog Logger = LogManager.GetLogger(typeof(SerialHealthMonitor));
+
         private PatientService patientService;
        // private DispatcherTimer timer;
         private Patient patient;
@@ -185,7 +191,9 @@ namespace simnet.com.data.simnet.views
                 grid_toma_signos.Visibility = Visibility.Hidden;
                 grid_toma_tempe.Visibility = Visibility.Visible;
                 tex_temp2.Visibility = Visibility.Hidden;
-                bot_siguiente_tem2.Visibility = Visibility.Hidden;
+                bot_siguiente_tem1.Visibility = Visibility.Hidden;
+                boton_toma.Visibility = Visibility.Visible;
+                bot_siguiente_tem2.Visibility = Visibility.Visible;
                 txt_Signos_tem_resu3.Visibility = Visibility.Hidden;
                 txt_resultado_temfin3.Visibility = Visibility.Hidden;
                 bot_siguiente_tem3.Visibility = Visibility.Hidden;
@@ -257,17 +265,21 @@ namespace simnet.com.data.simnet.views
 
                 using (SerialHealthMonitor srh = new SerialHealthMonitor())
                 {
+                   
+
                     srh.OpenPort();
-                         Debug.WriteLine("Enviando");
+                    Logger.Info($"Starting getting temperature command " + CMD_TEMPERATURA);
+
                     srh.SendHexData(CMD_TEMPERATURA);
 
                     // Wait for a moment to allow the device to respond (you can adjust this based on your use case).
                     System.Threading.Thread.Sleep(8000);
 
                     temperature = srh.HexToDecimal(srh.Temperature.ToString().Substring(0, 4), 10.0);
+                    Logger.Info($"Object obtained  " + srh.Temperature.ToString().Substring(0, 4));
 
                     txt_resultado_temfin3.Text = "Temp " + temperature.ToString() + " °C";
-
+                    Logger.Info($"Temperature obtained  " + temperature);
                     //MessageBox.Show("Temperature is " + temperature);
 
 
@@ -392,7 +404,9 @@ namespace simnet.com.data.simnet.views
                 bot_regresar.Visibility = Visibility.Hidden;
                 boton_salir.Visibility = Visibility.Hidden;
                 //MessageBox.Show("Procesando");
-                serialHealth.OpenPort();
+                using (SerialHealthMonitor srh = new SerialHealthMonitor())
+                {
+                    serialHealth.OpenPort();
                 Debug.WriteLine("Enviando");
                 serialHealth.SendHexData(CMD_NIBP);
                 // Wait for a moment to allow the device to respond (you can adjust this based on your use case).
@@ -423,14 +437,16 @@ namespace simnet.com.data.simnet.views
 
                 txt_arterial_paso42.Visibility = Visibility.Hidden;
                 bot_siguiente_presion2.Visibility = Visibility.Hidden;
-
-                txt_Signos_presion_resl.Visibility = Visibility.Hidden;
-                txt_resultado_presion.Visibility = Visibility.Hidden;
+                    bot_siguiente_presion1.Visibility = Visibility.Visible;
+                    txt_Signos_presion_resl.Visibility = Visibility.Hidden;
+                    boton_salir.Visibility = Visibility.Visible;
+                    txt_resultado_presion.Visibility = Visibility.Hidden;
                 bot_guardar_presion.Visibility = Visibility.Hidden;
                 boton_gris.Visibility = Visibility.Hidden;
 
                 txt_resultado_presion_pre.Visibility = Visibility.Hidden;
                 txt_resultado_presion_hora.Visibility = Visibility.Hidden;
+                }
             }
             else
             {
@@ -469,10 +485,12 @@ namespace simnet.com.data.simnet.views
             bot_guardar_presion.Visibility = Visibility.Visible;
 
 
-           
-            serialHealth.OpenPort();
-            Debug.WriteLine("Enviando");
-            serialHealth.SendHexData(CMD_NIBP);
+            using (SerialHealthMonitor srh = new SerialHealthMonitor())
+            {
+                serialHealth.OpenPort();
+                Logger.Info($"Tomando Presion  Iniciando ");
+
+                serialHealth.SendHexData(CMD_NIBP);
 
             // Wait for a moment to allow the device to respond (you can adjust this based on your use case).
             System.Threading.Thread.Sleep(8000);
@@ -488,11 +506,16 @@ namespace simnet.com.data.simnet.views
 
             // txt_resultado_presion_hora.Text = nibpm.ToString() + "/" + nibpd.ToString() + " " + nibph.ToString() + ":" + nibpmi.ToString() + ":" + nibps.ToString();
             resnibp = nibpm.ToString() + "/" + nibpd.ToString() + " " + nibph.ToString() + ":" + nibpmi.ToString() + ":" + nibps.ToString();
-            txt_resultado_presion.Text = "PAS mmHg  " + nibpPAS.ToString();
-            txt_resultado_presion_pre.Text = "PAD mmHg  " + nibpPAD.ToString();
-            //MessageBox.Show(" hora: " + resnibp);
+                Logger.Info($"Presion tomada   " + resnibp);
 
-            string clasificacion_pre = "";
+                txt_resultado_presion.Text = "PAS mmHg  " + nibpPAS.ToString();
+            txt_resultado_presion_pre.Text = "PAD mmHg  " + nibpPAD.ToString();
+                Logger.Info($" PAS  " + nibpPAS.ToString()) ;
+                Logger.Info($" PAD  " + nibpPAD.ToString());
+
+                //MessageBox.Show(" hora: " + resnibp);
+
+                string clasificacion_pre = "";
             int cmpVal = resnibp.CompareTo(resnibp1);
 
             if (cmpVal == 0)
@@ -565,6 +588,7 @@ namespace simnet.com.data.simnet.views
                 txt_resultado_presion_hora.Text = clasificacion_pre;
 
                 serialHealth.ClosePort();
+              }
             }
 
         } 
@@ -590,42 +614,50 @@ namespace simnet.com.data.simnet.views
 
             if (serialHealth.isConnected())
             {
-                serialHealth.OpenPort();
-                Debug.WriteLine("Enviando");
-                serialHealth.SendHexData(CMD_SPO);
 
-                // Wait for a moment to allow the device to respond (you can adjust this based on your use case).
-                System.Threading.Thread.Sleep(8000);
-                double spom = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(0, 2), 1);
-                double sopd = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(2, 2), 1);
-                double spoh = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(4, 2), 1);
-                double spomi = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(6, 2), 1);
-                double sops = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(8, 2), 1);
-                resnibp1 = spom.ToString() + "/" + sopd.ToString() + " " + spoh.ToString() + ":" + spomi.ToString() + ":" + sops.ToString();
+                using (SerialHealthMonitor srh = new SerialHealthMonitor())
+                {
+                    Logger.Info($"Starting Obteniendo Oximetria, comando " +  CMD_SPO );
 
-                serialHealth.ClosePort();
+                    serialHealth.OpenPort();
+                   
+                    serialHealth.SendHexData(CMD_SPO);
+
+                    // Wait for a moment to allow the device to respond (you can adjust this based on your use case).
+                    System.Threading.Thread.Sleep(8000);
+                    double spom = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(0, 2), 1);
+                    double sopd = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(2, 2), 1);
+                    double spoh = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(4, 2), 1);
+                    double spomi = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(6, 2), 1);
+                    double sops = serialHealth.HexToDecimal(serialHealth.SOP.ToString().Substring(8, 2), 1);
+                    Logger.Info($"Obtained Object Serial Heal SOP" + serialHealth.SOP.ToString());
+                    resnibp1 = spom.ToString() + "/" + sopd.ToString() + " " + spoh.ToString() + ":" + spomi.ToString() + ":" + sops.ToString();
+                    Logger.Info($"Obtained Object" + resnibp1);
+
+                    serialHealth.ClosePort();
 
 
-                grid_toma_signos.Visibility = Visibility.Hidden;
-                grid_toma_tempe.Visibility = Visibility.Hidden;
-                grid_toma_presion.Visibility = Visibility.Hidden;
-                grid_oximetria_resultado.Visibility = Visibility.Visible;
+                    grid_toma_signos.Visibility = Visibility.Hidden;
+                    grid_toma_tempe.Visibility = Visibility.Hidden;
+                    grid_toma_presion.Visibility = Visibility.Hidden;
+                    grid_oximetria_resultado.Visibility = Visibility.Visible;
 
-                txt_oximetria_paso2.Visibility = Visibility.Hidden;
+                    txt_oximetria_paso2.Visibility = Visibility.Hidden;
 
-                txt_oximetria_paso3.Visibility = Visibility.Hidden;
-                txt_oximetria_paso4.Visibility = Visibility.Hidden;
-                bot_siguiente_oximetria2.Visibility = Visibility.Hidden;
+                    txt_oximetria_paso3.Visibility = Visibility.Hidden;
+                    txt_oximetria_paso4.Visibility = Visibility.Hidden;
+                    bot_siguiente_oximetria2.Visibility = Visibility.Hidden;
 
-                txt_resultado_oximetria.Visibility = Visibility.Hidden;
-                txt_Signos_oximetria_resul.Visibility = Visibility.Hidden;
-                bot_Toma_oximetria.Visibility = Visibility.Hidden;
-                txt_resultado_oximetria_pre.Visibility = Visibility.Hidden;
-                txt_resultado_oximetria_hora.Visibility = Visibility.Hidden;
-                txt_resultado_oximetria_hora_pre.Visibility = Visibility.Hidden;
-            }
+                    txt_resultado_oximetria.Visibility = Visibility.Hidden;
+                    txt_Signos_oximetria_resul.Visibility = Visibility.Hidden;
+                    bot_Toma_oximetria.Visibility = Visibility.Hidden;
+                    txt_resultado_oximetria_pre.Visibility = Visibility.Hidden;
+                    txt_resultado_oximetria_hora.Visibility = Visibility.Hidden;
+                    txt_resultado_oximetria_hora_pre.Visibility = Visibility.Hidden;
+                }
+               }
             else
-            {
+                {
                 MessageBox.Show("Por favor encender el dispositivo del boton amarillo, Dispositivo Apagado");
 
 
@@ -671,10 +703,12 @@ namespace simnet.com.data.simnet.views
             bot_siguiente_oximetria2.Visibility = Visibility.Hidden;
             txt_resultado_oximetria_hora.Visibility = Visibility.Visible;
             txt_resultado_oximetria_hora_pre.Visibility = Visibility.Visible;
-           // boton_salir_oxi.Visibility = Visibility.Hidden;
+            // boton_salir_oxi.Visibility = Visibility.Hidden;
 
+            using (SerialHealthMonitor srh = new SerialHealthMonitor())
+            {
 
-            serialHealth.OpenPort();
+                serialHealth.OpenPort();
             Debug.WriteLine("Enviando");
             serialHealth.SendHexData(CMD_SPO);
 
@@ -809,7 +843,7 @@ namespace simnet.com.data.simnet.views
             txt_resultado_oximetria_hora.Text = clasificacion_spo;
             txt_resultado_oximetria_hora_pre.Text = clasificacion_pres;
             serialHealth.ClosePort();
-            
+               }
 
 
         }

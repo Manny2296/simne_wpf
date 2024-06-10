@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
@@ -12,6 +13,7 @@ namespace simnet.com.data.simnet.models
 {
     internal class SerialHealthMonitor : IDisposable
     {
+        private static readonly ILog Logger = LogManager.GetLogger(typeof(SerialHealthMonitor));
         private SerialPort comPort;
         public string Temperature { get; set; }
         public string SOP { get; set; }
@@ -22,6 +24,7 @@ namespace simnet.com.data.simnet.models
             int baudRate = 9600;
             comPort.BaudRate = baudRate;
             comPort.DataReceived += SerialPort_DataReceived;
+            Logger.Info($"SerialHealthMonitor initialized with port {comPort.PortName} and baud rate {baudRate}");
 
         }
 
@@ -36,12 +39,14 @@ namespace simnet.com.data.simnet.models
                 comPort.Open();
                 isPortAvailable = true;
                 comPort.Close(); // Close the port after checking its availability
+                Logger.Info($"Port {comPort.PortName} is available.");
             }
             catch (System.UnauthorizedAccessException)
             {
                 // The port is in use by another application
               //  MessageBox.Show("El Dispositivo está siendo utilizado por otra aplicación");
                 isPortBeingUsed = true;
+                Logger.Warn($"Port {comPort.PortName} is in use by another application.");
             }
             catch (System.IO.IOException)
             {
@@ -53,6 +58,7 @@ namespace simnet.com.data.simnet.models
             {
                 // The port is available (device connected)
              //   MessageBox.Show("Dispositivo conectado");
+              Logger.Error($"Port {comPort.PortName} does not exist or is disconnected.");
                 return true;
             }
             else
@@ -77,10 +83,12 @@ namespace simnet.com.data.simnet.models
             try
             {
                 comPort.Open();
+                Logger.Info($"Port {comPort.PortName} opened successfully.");   
             }
             catch (Exception ex)
             {
                 Debug.WriteLine("Error opening the serial port: " + ex.Message);
+                Logger.Error($"Error opening the serial port {comPort.PortName}.", ex);
             }
         }
 
@@ -138,16 +146,19 @@ namespace simnet.com.data.simnet.models
                 {
                     byte[] bytesToSend = StringToByteArray(hexData);
                     comPort.Write(bytesToSend, 0, bytesToSend.Length);
-                    Debug.WriteLine("Data sent successfully.");
+                  //  Debug.WriteLine("Data sent successfully.");
+                    Logger.Info($"Hex data sent successfully: {hexData}");
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine("Error sending data: " + ex.Message);
+                 //   Debug.WriteLine("Error sending data: " + ex.Message);
+                    Logger.Error($"Error sending hex data: {hexData}", ex);
                 }
             }
             else
             {
-                Debug.WriteLine("Serial port is not open. Call OpenPort() first.");
+               // Debug.WriteLine("Serial port is not open. Call OpenPort() first.");
+                Logger.Warn("Serial port is not open. Call OpenPort() first.");
             }
         }
 
@@ -172,15 +183,18 @@ namespace simnet.com.data.simnet.models
                 {
                     comPort.Write(data);
                     Debug.WriteLine("Data sent successfully: " + data);
+                    Logger.Info($"Data sent successfully: {data}");
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine("Error sending data: " + ex.Message);
+                    Logger.Error($"Error sending data: {data}", ex);
                 }
             }
             else
             {
                 Debug.WriteLine("Serial port is not open. Call OpenPort() first.");
+                Logger.Warn("Serial port is not open. Call OpenPort() first.");
             }
         }
 
@@ -190,10 +204,12 @@ namespace simnet.com.data.simnet.models
             {
                 comPort.Close();
                 Debug.WriteLine("## Serial port closed.");
+                Logger.Info("Serial port closed.");
             }
             else
             {
                 Debug.WriteLine("## Serial port is not open.");
+                Logger.Warn("Serial port is not open.");
             }
         }
         private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -202,27 +218,33 @@ namespace simnet.com.data.simnet.models
             {
                 SerialPort sp = (SerialPort)sender;
                 string receivedData = sp.ReadExisting();
-                Debug.WriteLine("## Received data: " + receivedData);
+               // Debug.WriteLine("## Received data: " + receivedData);
+                Logger.Info($"Received data: {receivedData}");
                 byte[] bytes = StringToBytes(receivedData);
                 string hexavalue = BytesToHex(bytes);
-                Debug.WriteLine("## Hexa Value" + hexavalue);
+              //  Debug.WriteLine("## Hexa Value" + hexavalue);
+                Logger.Info($"Hex value: {hexavalue}");
                 string temperatura_hexa = hexavalue.Substring(hexavalue.Length - 14);
-                Debug.WriteLine("## Temperatura: " + temperatura_hexa);
+                Logger.Info($"Temperature: {temperatura_hexa}");
+               // Debug.WriteLine("## Temperatura: " + temperatura_hexa);
                 string SPO_hexa = hexavalue.Substring(hexavalue.Length - 28);
-                Debug.WriteLine("## SOP: " + SPO_hexa);
+                Logger.Info($"SOP: {SPO_hexa}");
+               // Debug.WriteLine("## SOP: " + SPO_hexa);
                 string NIPB_hexa = hexavalue.Substring(hexavalue.Length - 36);
-                Debug.WriteLine("## NIPB: " + NIPB_hexa);
+               // Debug.WriteLine("## NIPB: " + NIPB_hexa);
+                Logger.Info($"NIBP: {NIPB_hexa}");
                 // MessageBox.Show("REc" + receivedData);
                 Temperature = temperatura_hexa;
                 SOP = SPO_hexa;
                 NIBP = NIPB_hexa;
-              
+       
             }
             catch (Exception ex)
             {
 
                 Debug.WriteLine("Exception : " + ex.ToString());
-               
+                Logger.Error("Exception in SerialPort_DataReceived.", ex);
+
             }
 
         }
@@ -237,6 +259,7 @@ namespace simnet.com.data.simnet.models
         public void Dispose()
         {
             comPort.Dispose();
+            Logger.Info("SerialHealthMonitor disposed.");
         }
     }
 }

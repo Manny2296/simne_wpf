@@ -6,6 +6,7 @@ C:\Users\T0245657\source\repos\simnet\simnet\simnet\bin\Debug\net7.0-windows\sim
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\bin\Debug\net7.0-windows\simnet.pdb
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\bin\Debug\net7.0-windows\EntityFramework.SqlServer.dll
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\bin\Debug\net7.0-windows\EntityFramework.dll
+C:\Users\T0245657\source\repos\simnet\simnet\simnet\bin\Debug\net7.0-windows\log4net.dll
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\bin\Debug\net7.0-windows\System.Data.SQLite.dll
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\bin\Debug\net7.0-windows\System.Data.SQLite.EF6.dll

@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <PackageIcon>simnet.jpeg</PackageIcon>
+    <PackageIcon>simnet.ico</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +28,7 @@
     <None Remove="com.data.simnet.views\printer.png" />
     <None Remove="com.data.simnet.views\pulse-oximeter_6726512-removebg-preview.png" />
     <None Remove="com.data.simnet.views\sentempera.png" />
+    <None Remove="com.data.simnet.views\simnet.ico" />
     <None Remove="com.data.simnet.views\simnet.jpeg" />
     <None Remove="com.data.simnet.views\Temperatura.png" />
     <None Remove="com.data.simnet.views\temperaturec.png" />
@@ -35,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.17" />
     <PackageReference Include="SQLite" Version="3.13.0" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
     <PackageReference Include="System.IO.Ports" Version="7.0.0" />
@@ -57,7 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\..\Downloads\simnet.jpeg">
+    <None Include="..\..\..\..\..\Downloads\simnet.ico">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -84,6 +86,7 @@
     <Resource Include="com.data.simnet.views\printer.png" />
     <Resource Include="com.data.simnet.views\pulse-oximeter_6726512-removebg-preview.png" />
     <Resource Include="com.data.simnet.views\sentempera.png" />
+    <Resource Include="com.data.simnet.views\simnet.ico" />
     <Resource Include="com.data.simnet.views\simnet.jpeg" />
     <Resource Include="com.data.simnet.views\Temperatura.png" />
     <Resource Include="com.data.simnet.views\temperaturec.png" />

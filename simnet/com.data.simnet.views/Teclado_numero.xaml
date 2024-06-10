@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:simnet.com.data.simnet.views"
         mc:Ignorable="d"
-        Title="Teclado Sim-net" Height="300" Width="800" ResizeMode="NoResize" ShowActivated="False" WindowStartupLocation="Manual" Top="724" Left="0" WindowStyle="None">
-    <Grid>
-        <UniformGrid x:Name="numeros" Rows="4" Columns="10" HorizontalAlignment="Left" VerticalAlignment="Top" Height="204" Width="556" Margin="130,61,0,0" Visibility="Visible">
+        Title="Teclado Sim-net" Height="300" Width="339" ShowActivated="False" WindowStartupLocation="CenterScreen" Top="724" Left="0" ShowInTaskbar="False">
+    <Grid HorizontalAlignment="Center" Width="339">
+        <UniformGrid x:Name="numeros" Rows="4" Columns="10" Visibility="Visible" Margin="0,43,0,0" HorizontalAlignment="Center" Width="339">
             <Button Content="" Click="KeyButton_Click" FontSize="30" Visibility="Hidden" />
             <Button Content="" Click="KeyButton_Click" FontSize="30" Visibility="Hidden" />
             <Button Content="7" Click="KeyButton_Click" FontSize="30" />
@@ -37,10 +37,10 @@
             <Button Content="3" Click="KeyButton_Click" FontSize="30" />
             <Button Content="." Click="KeyButton_Click" FontSize="30" Visibility="Hidden" />
             <Button Content="" Click="KeyButton_Click" FontSize="30" Visibility="Hidden" />
-            <Button Content="Borrar" Click="KeyButton_Click" Margin="20,0,-35,0" FontSize="16" Height="37" VerticalAlignment="Center" />
+            <Button Content="Borrar" Click="KeyButton_Click" Margin="-30,12,15,0" FontSize="16" Height="38" VerticalAlignment="Top" />
             <Button Content=" " Click="KeyButton_Click" Margin="-316,53,20,-41" Visibility="Hidden" />
         </UniformGrid>
         <TextBox x:Name="TypedText" HorizontalAlignment="Left" VerticalAlignment="Top" Width="465" Height="33" FontSize="20" Margin="10,10,0,0" Visibility="Hidden" />
-        <Image HorizontalAlignment="Left" Height="100" Margin="0,190,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/simnet.jpeg"/>
+        <Image HorizontalAlignment="Left" Margin="2,232,0,2" Width="60" Source="/com.data.simnet.views/simnet.jpeg" RenderTransformOrigin="-0.161,0.872"/>
     </Grid>
 </Window>
