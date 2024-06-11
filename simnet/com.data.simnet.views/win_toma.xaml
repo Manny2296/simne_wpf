@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:simnet.com.data.simnet.views"
         mc:Ignorable="d"
-        Title="win_toma" Height="1024" Width="768" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+        Title="win_toma" Height="1920" Width="1080" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
 
         <Grid x:Name="grid_toma_signos" Height="NaN" Margin="44,124,44,10" Width="NaN" Visibility="Hidden">
@@ -159,8 +159,8 @@
             </Button>
 
         </Grid>
-        <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="768" Source="/com.data.simnet.views/image.png"/>
-        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="500" Source="/com.data.simnet.views/Logoblanco.png"/>
+        <Image Height="100" VerticalAlignment="Top" Source="/com.data.simnet.views/image.png" HorizontalAlignment="Center" Width="1080" Stretch="Fill"/>
+        <Image Height="60" VerticalAlignment="Top" Source="/com.data.simnet.views/Logoblanco.png" Margin="316,14,312,0"/>
         <Button x:Name="bot_regresar" Content="Regresar" HorizontalAlignment="Left" Margin="450,894,0,0" VerticalAlignment="Top" Height="100" Width="100" BorderBrush="White" Click="Button_Click" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="/com.data.simnet.views/left-arrow_892645.png"/>

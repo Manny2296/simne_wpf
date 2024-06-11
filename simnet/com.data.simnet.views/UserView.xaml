@@ -6,57 +6,56 @@
         xmlns:local="clr-namespace:simnet"
 
         mc:Ignorable="d"
-        Title="UserView" Height="1024" Width="768" WindowStartupLocation= "CenterScreen" Left="500" Top="90" ResizeMode="NoResize" WindowStyle="None" Icon="/com.data.simnet.views/simnet.ico" >
+        Title="UserView"  Height="1920" Width="1080" WindowStartupLocation= "CenterScreen" Left="500" Top="90" ResizeMode="NoResize" WindowStyle="None" Icon="/com.data.simnet.views/simnet.ico" >
     <Grid Cursor="AppStarting" Margin="0,-4,0,4">
 
-        <TextBlock x:Name="txt_Documento" HorizontalAlignment="Center" Margin="0,128,0,0" TextWrapping="Wrap" Text="Documento" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="#FF656565"/>
-        <Button x:Name="btn_buscar" Content="" HorizontalAlignment="Left" Margin="587,599,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF18659E" BorderBrush="#FF18659E" Cursor="AppStarting" Height="100" Width="173" Click="Button_Click">
+        <TextBlock x:Name="txt_Documento" HorizontalAlignment="Center" Margin="0,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="#FF656565"><Run Text="1. "/><Run Text="Inserte su"/><Run Text=" numero"/><Run Language="pt-br" Text=" de"/><Run Text=" documento para iniciar"/></TextBlock>
+        <Button x:Name="btn_buscar" Content="" HorizontalAlignment="Left" Margin="592,1328,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF18659E" BorderBrush="White" Cursor="AppStarting" Height="100" Width="173" Click="Button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/com.data.simnet.views/enviar-removebg-preview.png"/>
             </Button.Background>
         </Button>
-        <Grid x:Name="gri_documento" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="496" Margin="86,245,0,0" >
+        <Grid x:Name="gri_documento" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="496" Margin="215,636,0,0" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="47*"/>
-                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label x:Name="documento" Content="Documento:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F"/>
-            <TextBox x:Name="txt_documento" HorizontalAlignment="Left" Margin="198,0,0,1" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="298" Grid.ColumnSpan="2"  BorderBrush="#FF0F43DE" PreviewMouseDown="txt_documento_PreviewMouseDown" />
+            <Label x:Name="documento" Content="Documento:" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="28" FontWeight="Bold" Foreground="#FF1F679F"/>
+            <TextBox x:Name="txt_documento" HorizontalAlignment="Left" Margin="188,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" Opacity="0.3" Foreground="#FF656565" Height="40" Width="308"  BorderBrush="#FF1F679F" PreviewMouseDown="txt_documento_PreviewMouseDown" BorderThickness="3,3,3,3" />
         </Grid>
-        <Grid x:Name="Grid_user_data" HorizontalAlignment="Left" Height="326" VerticalAlignment="Center" Width="496" Margin="86,0,0,0">
-            <Label x:Name="nombre" Content="Nombre:" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_nombre"  HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" Opacity="0.3" Foreground="#FF656565" Width="298" Margin="198,0,0,285" TextChanged="txt_nombre_TextChanged" PreviewMouseDown="txt_nombre_PreviewMouseDown" Height="40" VerticalAlignment="Bottom"/>
-            <Label x:Name="estatura" Content="Estatura:" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="0,96,0,0"/>
-            <TextBox x:Name="txt_estatura" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="298" Margin="198,96,0,0" TextChanged="txt_estatura_TextChanged" PreviewMouseDown="txt_estatura_PreviewMouseDown" PreviewTextInput="txt_nombre_PreviewTextInput" />
-            <Label x:Name="genero" Content="Genero:" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="0,48,0,0"/>
+        <Grid x:Name="Grid_user_data" HorizontalAlignment="Left" Height="438" VerticalAlignment="Top" Width="632" Margin="217,743,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="169*"/>
+                <ColumnDefinition Width="463*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="nombre" Content="Nombre:" HorizontalAlignment="Left" FontSize="28" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="14,8,0,0"/>
+            <TextBox x:Name="txt_nombre"  HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" Opacity="0.3" Foreground="#FF656565" Width="316" Margin="11,0,0,388" TextChanged="txt_nombre_TextChanged" PreviewMouseDown="txt_nombre_PreviewMouseDown" Height="40" VerticalAlignment="Bottom" Grid.Column="1" BorderBrush="#FF1F679F" BorderThickness="3,3,3,3"/>
+            <Label x:Name="estatura" Content="Estatura:" HorizontalAlignment="Left" FontSize="28" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="6,120,0,0"/>
+            <TextBox x:Name="txt_estatura" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="316" Margin="11,122,0,0" TextChanged="txt_estatura_TextChanged" PreviewMouseDown="txt_estatura_PreviewMouseDown" PreviewTextInput="txt_nombre_PreviewTextInput" Grid.Column="1" BorderBrush="#FF1F679F" BorderThickness="3,3,3,3" />
+            <Label x:Name="genero" Content="Genero:" HorizontalAlignment="Left" FontSize="28" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="6,62,0,0"/>
 
-            <ComboBox x:Name="cmbx_genero" HorizontalAlignment="Left" Width="298" RenderTransformOrigin="-2.533,-2.867" FontSize="20" SelectionChanged="txt_genero_SelectionChanged" BorderBrush="#FFE0E0E0" Height="40" VerticalAlignment="Top" Margin="198,49,0,0">
+            <ComboBox x:Name="cmbx_genero" HorizontalAlignment="Left" Width="316" RenderTransformOrigin="-2.533,-2.867" FontSize="20" SelectionChanged="txt_genero_SelectionChanged" BorderBrush="#FFE0E0E0" Height="40" VerticalAlignment="Top" Margin="11,62,0,0" Grid.Column="1">
                 <ComboBoxItem Content="Masculino" Tag="1"  />
                 <ComboBoxItem Content="Femenino" Tag="0" />
             </ComboBox>
-            <Label x:Name="lblSelectedGender" Visibility="Hidden" Content="Selected Gender:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,91,0,0" />
-            <Label x:Name="peso" Content="Peso:" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Center"/>
-            <TextBox x:Name="txt_peso" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="298" Margin="198,0,0,0" TextChanged="txt_peso_TextChanged" PreviewMouseDown="txt_peso_PreviewMouseDown"/>
-            <Label x:Name="mobile" Content="Celular:" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="0,284,0,0"/>
-            <TextBox x:Name="txt_mobile" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="298" Margin="198,284,0,0" TextChanged="txt_mobile_TextChanged" PreviewMouseDown="tex_celular"/>
-            <Label x:Name="edad" Content="Edad:" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="0,190,0,0"/>
-            <TextBox x:Name="txt_edad" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="298" VerticalAlignment="Top" Margin="198,191,0,0" TextChanged="txt_edad_TextChanged" PreviewMouseDown="txt_edad_PreviewMouseDown"/>
-            <Label x:Name="email" Content="Correo:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FF1F679F" Margin="0,237,0,0"/>
-            <TextBox x:Name="txt_email" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="298" VerticalAlignment="Top" Margin="198,238,0,0" TextChanged="txt_email_TextChanged" PreviewMouseDown="txt_correo_PreviewMouseDown"/>
+            <Label x:Name="lblSelectedGender" Visibility="Hidden" Content="Selected Gender:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="97,91,0,0" Grid.Column="1" />
+            <Label x:Name="peso" Content="Peso:" HorizontalAlignment="Left" FontSize="28" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="26,247,0,0"/>
+            <TextBox x:Name="txt_peso" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="316" Margin="11,249,0,0" TextChanged="txt_peso_TextChanged" PreviewMouseDown="txt_peso_PreviewMouseDown" Grid.Column="1" BorderBrush="#FF1F679F" BorderThickness="3,3,3,3"/>
+            <Label x:Name="mobile" Content="Celular:" HorizontalAlignment="Left" FontSize="28" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="12,367,0,0"/>
+            <TextBox x:Name="txt_mobile" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="41" Width="316" Margin="11,368,0,0" TextChanged="txt_mobile_TextChanged" PreviewMouseDown="tex_celular" Grid.Column="1" BorderBrush="#FF1F679F" BorderThickness="3,3,3,3"/>
+            <Label x:Name="edad" Content="Edad:" HorizontalAlignment="Left" FontSize="28" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="14,188,0,0"/>
+            <TextBox x:Name="txt_edad" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="316" VerticalAlignment="Top" Margin="11,188,0,0" TextChanged="txt_edad_TextChanged" PreviewMouseDown="txt_edad_PreviewMouseDown" Grid.Column="1" BorderBrush="#FF1F679F" BorderThickness="3,3,3,3"/>
+            <Label x:Name="email" Content="Correo:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" Foreground="#FF1F679F" Margin="14,308,0,0"/>
+            <TextBox x:Name="txt_email" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" Opacity="0.3" Foreground="#FF656565" Height="40" Width="316" VerticalAlignment="Top" Margin="11,309,0,0" TextChanged="txt_email_TextChanged" PreviewMouseDown="txt_correo_PreviewMouseDown" Grid.Column="1" BorderBrush="#FF1F679F" BorderThickness="3,3,3,0"/>
         </Grid>
-        <Button x:Name="btn_update" Content="Actualizar y Continuar" HorizontalAlignment="Left" Margin="587,476,0,0" VerticalAlignment="Top" FontSize="15" Foreground="#FF18659E" BorderBrush="#FF18659E" Cursor="AppStarting" Height="100" Width="171"  RenderTransformOrigin="0.475,-1.4" Click="btn_update_Click" FontWeight="Bold">
-            <Button.Background>
-                <ImageBrush/>
-            </Button.Background>
-        </Button>
+        <Button x:Name="btn_update" Content="Actualizar y Continuar" HorizontalAlignment="Left" Margin="266,1330,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" BorderBrush="#FF18659E" Cursor="AppStarting" Height="100" Width="166"  RenderTransformOrigin="0.475,-1.4" Click="btn_update_Click" Background="#FF1F679F"/>
         <TextBlock x:Name="txt_datos_actua" HorizontalAlignment="Center" Margin="0,128,0,0" TextWrapping="Wrap" Text="Tus Datos" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Foreground="#FF656565" Visibility="Hidden"/>
-        <Image HorizontalAlignment="Center" Height="183" Margin="0,775,0,0" VerticalAlignment="Top" Width="590" Source="/com.data.simnet.views/cora-removebg-preview.png" Opacity="0.4">
+        <Image HorizontalAlignment="Center" Height="183" Margin="0,1742,0,0" VerticalAlignment="Top" Width="590" Source="/com.data.simnet.views/cora-removebg-preview.png" Opacity="0.4">
             <Image.OpacityMask>
                 <ImageBrush ImageSource="/com.data.simnet.views/cora-removebg-preview.png"/>
             </Image.OpacityMask>
         </Image>
-        <Image HorizontalAlignment="Left" Height="100" Margin="-1,4,0,0" VerticalAlignment="Top" Width="766" Source="/com.data.simnet.views/image.png"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="0,4,0,0" VerticalAlignment="Top" Width="500" Source="/com.data.simnet.views/Logoblanco.png"/>
+        <Image HorizontalAlignment="Center" Height="100" Margin="0,4,0,0" VerticalAlignment="Top" Width="1081" Source="/com.data.simnet.views/image.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="80" Margin="349,14,0,0" VerticalAlignment="Top" Width="415" Source="/com.data.simnet.views/Logoblanco.png"/>
 
     </Grid>
 </Window>

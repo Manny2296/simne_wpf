@@ -5,32 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:simnet.com.data.simnet.views"
         mc:Ignorable="d"
-        Title="UserDiagnosticView" Height="1024" Width="768" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Icon="/com.data.simnet.views/simnet.ico">
-    <Grid Width="768" Margin="0,0,0,-6" Height="1024">
-        <Label x:Name="Usuario" Content="Usuario:" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="168,266,0,0" Width="150"/>
-        <TextBlock x:Name="titel_toma_signos" HorizontalAlignment="Left" Margin="155,142,0,0" TextWrapping="Wrap" Text="Signos Vitales " VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Width="482" Foreground="#FF656565"/>
-        <Button x:Name="boton_actualizacion" Content="Actualización Datos" HorizontalAlignment="Left" Margin="240,402,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_actualizacion_Click">
+        Title="UserDiagnosticView" Height="1920" Width="1080" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Icon="/com.data.simnet.views/simnet.ico">
+    <Grid>
+        <Label x:Name="Usuario" Content="Usuario:" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" Foreground="#FF1F679F" VerticalAlignment="Top" Margin="220,616,0,0" Width="196" Height="71"/>
+        <TextBlock x:Name="titel_toma_signos" HorizontalAlignment="Left" Margin="208,452,0,0" TextWrapping="Wrap" Text="Signos Vitales " VerticalAlignment="Top" FontSize="72" FontWeight="Bold" Width="628" Foreground="#FF656565" Height="118"/>
+        <Button x:Name="boton_actualizacion" Content="Actualización Datos" HorizontalAlignment="Left" Margin="314,784,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_actualizacion_Click" Height="84" Width="586">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="boton_toma_nuestra" Content="Toma de Muestras" HorizontalAlignment="Left" Margin="240,564,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_toma_nuestra_Click" Width="449">
+        <Button x:Name="boton_toma_nuestra" Content="Toma de Muestras" HorizontalAlignment="Left" Margin="314,0,0,0" VerticalAlignment="Center" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_toma_nuestra_Click" Width="586" Height="84">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Button x:Name="boton_historial" Content="Historial" HorizontalAlignment="Left" Margin="240,720,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_historial_Click" Width="224">
+        <Button x:Name="boton_historial" Content="Historial" HorizontalAlignment="Left" Margin="314,1179,0,0" VerticalAlignment="Top" BorderBrush="#FF03ABB0" Foreground="#FF656565" FontSize="48" FontWeight="Bold" Click="boton_historial_Click" Width="292" Height="84">
             <Button.Background>
                 <ImageBrush/>
             </Button.Background>
         </Button>
-        <Label x:Name="lbl_name" Content="xxx xxxx xx" HorizontalAlignment="Left" Height="55" Margin="318,266,0,0" VerticalAlignment="Top" Width="348" FontSize="36" Opacity="0.6"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="80,401,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/diagnostico-2-removebg-preview.png"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="80,548,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/paciente-removebg-preview.png"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="88,704,0,0" VerticalAlignment="Top" Width="100" Source="/com.data.simnet.views/historia_s-removebg-preview.png"/>
-        <Image HorizontalAlignment="Center" Height="97" VerticalAlignment="Top" Width="768" Source="/com.data.simnet.views/image.png"/>
-        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="400" Source="/com.data.simnet.views/Logoblanco.png"/>
-        <Button x:Name="boton_salir" Content="" HorizontalAlignment="Left" Margin="591,894,0,0" VerticalAlignment="Top" Height="100" Width="100" BorderBrush="White" Click="Button_Click_Salir">
+        <Label x:Name="lbl_name" Content="xxx xxxx xx" HorizontalAlignment="Left" Height="68" Margin="416,616,0,0" VerticalAlignment="Top" Width="454" FontSize="36" Opacity="0.6"/>
+        <Image HorizontalAlignment="Left" Height="124" Margin="106,783,0,0" VerticalAlignment="Top" Width="131" Source="/com.data.simnet.views/diagnostico-2-removebg-preview.png"/>
+        <Image HorizontalAlignment="Left" Height="124" Margin="106,0,0,0" VerticalAlignment="Center" Width="131" Source="/com.data.simnet.views/paciente-removebg-preview.png"/>
+        <Image HorizontalAlignment="Left" Height="124" Margin="116,1159,0,0" VerticalAlignment="Top" Width="130" Source="/com.data.simnet.views/historia_s-removebg-preview.png"/>
+        <Image HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="1075" Source="/com.data.simnet.views/image.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="78" VerticalAlignment="Top" Width="343" Source="/com.data.simnet.views/Logoblanco.png" Margin="373,10,0,0"/>
+        <Button x:Name="boton_salir" Content="" HorizontalAlignment="Left" Margin="772,1395,0,0" VerticalAlignment="Top" Height="134" Width="128" BorderBrush="White" Click="Button_Click_Salir" RenderTransformOrigin="0.515,0.318">
             <Button.Background>
                 <ImageBrush ImageSource="/com.data.simnet.views/exit2.png"/>
             </Button.Background>
