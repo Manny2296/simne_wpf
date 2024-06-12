@@ -42,6 +42,9 @@
     <Page Update="com.data.simnet.views\UserDiagnosticView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="com.data.simnet.views\UserViewDev.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="com.data.simnet.views\win_toma.xaml">
       <SubType>Designer</SubType>
     </Page>

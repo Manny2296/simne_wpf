@@ -1,4 +1,5 @@
-﻿using simnet.com.data.simnet.models;
+﻿using log4net;
+using simnet.com.data.simnet.models;
 using System.Collections.Generic;
 using System.Configuration;
 
@@ -7,10 +8,13 @@ namespace simnet.com.data.simnet.services
     internal class PatientService
     {
         private DBConnection conn;
+        private static readonly ILog Logger = LogManager.GetLogger(typeof(SerialHealthMonitor));
         public PatientService()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["SQLiteConnectionString"].ConnectionString;
             conn = new DBConnection(new System.Data.SQLite.SQLiteConnection(connectionString));
+            Logger.Info($"Connected to bd successfully");
+
 
         }
 

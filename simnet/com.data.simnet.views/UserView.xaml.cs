@@ -11,7 +11,7 @@ namespace simnet
     /// <summary>
     /// Lógica de interacción para UserVIew.xaml
     /// </summary>
-    public partial class UserView : Window
+    public partial class UserViewDev : Window
     {
         private PatientService patientService;
         private Patient patient;
@@ -24,7 +24,7 @@ namespace simnet
 
 
 
-        public UserView()
+        public UserViewDev()
 
         {
             
@@ -36,7 +36,7 @@ namespace simnet
 
         }
 
-        public UserView(Patient p)
+        public UserViewDev(Patient p)
         {
             InitializeComponent();
             this.patient = p;

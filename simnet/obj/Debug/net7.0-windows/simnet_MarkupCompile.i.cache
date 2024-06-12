@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\App.xaml
-8184922513
+9-324667184
 
-19-541676790
+20-1775889671
 205-795199362
-com.data.simnet.views\Historial.xaml;com.data.simnet.views\Teclado.xaml;com.data.simnet.views\teclado_letras.xaml;com.data.simnet.views\Teclado_numero.xaml;com.data.simnet.views\UserDiagnosticView.xaml;com.data.simnet.views\UserView.xaml;com.data.simnet.views\win_toma.xaml;MainWindow.xaml;
+com.data.simnet.views\Historial.xaml;com.data.simnet.views\Teclado.xaml;com.data.simnet.views\teclado_letras.xaml;com.data.simnet.views\Teclado_numero.xaml;com.data.simnet.views\UserDiagnosticView.xaml;com.data.simnet.views\UserView.xaml;com.data.simnet.views\UserViewDev.xaml;com.data.simnet.views\win_toma.xaml;MainWindow.xaml;
 
 True
 

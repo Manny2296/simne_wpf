@@ -38,6 +38,7 @@ C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\Teclado_numero.g.cs
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\UserDiagnosticView.g.cs
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\UserView.g.cs
+C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\UserViewDev.g.cs
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\win_toma.g.cs
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\App.g.cs
@@ -49,6 +50,7 @@ C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\Teclado_numero.baml
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\UserDiagnosticView.baml
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\UserView.baml
+C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\UserViewDev.baml
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\com.data.simnet.views\win_toma.baml
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\T0245657\source\repos\simnet\simnet\simnet\obj\Debug\net7.0-windows\simnet.g.resources
